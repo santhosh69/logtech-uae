@@ -162,6 +162,10 @@ footer {
     margin: 10px 0;
   }
 }
+header {
+  padding-top: 20px; /* adds 20px space at the top */
+  text-align: center;
+}
 
 .product-grid {
   display: grid;
