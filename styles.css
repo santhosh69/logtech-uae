@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  /* background: linear-gradient(to bottom, #0077b6, #00b4d8); */
+  min-height: 100vh;
+}
+
+/* header {
+  background: linear-gradient(to right, #0077b6, #00b4d8);
+  color: #fff;
+  padding: 20px;
+} */
+
+header img.banner {
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+  display: block;
+}
+
+#hero {
+  background: url("https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80")
+    no-repeat center center/cover;
+  /* color: #fff; */
+  text-align: center;
+  padding: 100px 20px;
+}
+
+header h1 {
+  text-align: center;
+}
+
+nav {
+  background: linear-gradient(to right, #0077b6, #00b4d8); /* blue gradient */
+  padding: 15px 0; /* top & bottom space inside strip */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0; /* remove default padding */
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#hero {
+  background: url("https://source.unsplash.com/1600x400/?computer,store")
+    no-repeat center center/cover;
+  /* color: #fff; */
+  text-align: center;
+  padding: 100px 20px;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0077b6; /* blue color for subheading */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  /* background: rgba(255, 255, 255, 0.2); White with 20% opacity */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  backdrop-filter: blur(10px); /* Optional: adds a glass effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+  /* color: #fff; Make text white for contrast */
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  background: #0077b6;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #00b4d8;
+}
+
+footer {
+  text-align: center;
+  background: #0077b6;
+  color: #fff;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.product-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  display: flex; /* make it flex */
+  flex-direction: column; /* stack image + text vertically */
+  justify-content: space-between; /* push items apart to fill box */
+  height: 250px; /* fixed height for all items */
+  box-sizing: border-box;
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  max-height: 150px; /* constrain image height */
+  object-fit: contain; /* keep aspect ratio inside box */
+}
+
+.product-item h3 {
+  margin-top: 10px;
+  color: #333; /* visible on white background */
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 20px;
+  align-items: center;
+  max-width: 800px; /* 👈 limit total width */
+  margin: 0 auto; /* 👈 center left & right */
+}
+
+.logo-grid img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(
+    100%
+  ); /* optional: makes logos monochrome for a neat look */
+  transition: filter 0.3s;
+}
+
+.logo-grid img:hover {
+  filter: grayscale(0%); /* hover to show original color */
+}
