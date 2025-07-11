@@ -221,3 +221,119 @@ footer {
 .logo-grid img:hover {
   filter: grayscale(0%); /* hover to show original color */
 }
+
+/* For the hamburger menu */
+/* --- BASE NAV --- */
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0077cc;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 1.5em;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* --- HAMBURGER --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+/* --- OVERLAY --- */
+.overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -250px; /* start hidden */
+    width: 250px;
+    height: 100%;
+    background: #0077cc;
+    text-align: left;
+    padding: 80px 20px; /* space for top */
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  nav ul li {
+    margin: 20px 0;
+  }
+
+  nav ul.show {
+    right: 0; /* slide in! */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+  }
+
+  .overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

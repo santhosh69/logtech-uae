@@ -6,18 +6,40 @@
     <meta name="color-scheme" content="light only" />
 
     <title>Logtech Computers and Internet</title>
-    <link rel="stylesheet" href="styles.css" />
+
     <link rel="icon" type="image/jpg" href="logo.jpg" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
   <body>
     <header>
       <nav>
-        <ul>
+        <div class="logo">LOGTECH</div>
+
+        <!-- Fancy Hamburger -->
+        <div class="hamburger" onclick="toggleMenu(this)">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Slide-in Nav Links -->
+        <ul id="nav-links">
           <li><a href="#services">Services</a></li>
           <li><a href="#products">Products</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#contact">Enquiry</a></li>
         </ul>
+
+        <!-- Overlay -->
+        <div class="overlay" onclick="closeMenu()"></div>
       </nav>
       <img src="banner.png" alt="Logtech Banner" class="banner" />
       <h1>LAPTOP SALES AND SERVICE</h1>
@@ -56,51 +78,51 @@
       <h2>IT Peripherals:</h2>
       <!-- IT Peripherals -->
       <div class="product-grid">
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up">
           <img src="images/server.jpg" alt="Server" />
           <h3>Server</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="200">
           <img src="images/notebooks.jpg" alt="Notebooks" />
           <h3>Notebooks</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="300">
           <img src="images/desktops.jpg" alt="Desktops" />
           <h3>Desktops</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="400">
           <img src="images/printers.jpg" alt="Printers" />
           <h3>Printers</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="500">
           <img src="images/pos.webp" alt="POS System" />
           <h3>POS System</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="600">
           <img src="images/scanner.jfif" alt="Scanners" />
           <h3>Scanners</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="700">
           <img src="images/barcode-printer.jpg" alt="Barcode Printer" />
           <h3>Barcode Printer</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="800">
           <img src="images/ups.webp" alt="UPS" />
           <h3>UPS</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="900">
           <img src="images/hdd.webp" alt="Harddisk" />
           <h3>Harddisk</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="1000">
           <img src="images/networking.webp" alt="Networking Accessories" />
           <h3>Networking Accessories</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="1100">
           <img src="images/projector.jfif" alt="Multimedia Projector" />
           <h3>Multimedia Projector</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="1200">
           <img
             src="images/projector-accessories.webp"
             alt="Projector Accessories"
@@ -114,30 +136,30 @@
       <h2>Printing Supplies:</h2>
       <!-- Printing Supplies -->
       <div class="product-grid">
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up">
           <img src="images/toner.webp" alt="Toner" />
           <h3>Toner</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="100">
           <img
             src="images/printer-ink-cartridges-500x500.webp"
             alt="Cartridges"
           />
           <h3>Ink Cartridges</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="200">
           <img src="images/a4-size-paper-bundle.jpg" alt="Paper" />
           <h3>Paper</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="300">
           <img src="images/drum.jpg" alt="Printer Drum" />
           <h3>Printer Drum</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="400">
           <img src="images/barcodelabel.webp" alt="Barcode Label" />
           <h3>Barcode Labels</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="500">
           <img src="images/ribbon.jpg" alt="Ribbon" />
           <h3>Printer Ribbons</h3>
         </div>
@@ -148,23 +170,23 @@
       <h2>Data Storage:</h2>
       <!-- Data Storage -->
       <div class="product-grid">
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up">
           <img src="images/flashdrive.avif" alt="Flash Drive" />
           <h3>Flash Drive</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="100">
           <img src="images/memorycards.jpg" alt="Memory Cards" />
           <h3>Memory Cards</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="200">
           <img src="images/hdd.webp" alt="HDD" />
           <h3>Harddisk</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="300">
           <img src="images/data-cartridge.jpg" alt="Data Backup Cartridge" />
           <h3>Data Cartridge</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="400">
           <img src="images/nas.webp" alt="NAS Drive" />
           <h3>NAS Drive</h3>
         </div>
@@ -180,42 +202,42 @@
     </section>
     <div class="logo-grid">
       <div class="logo-grid">
-        <img src="images/logos/apple.png" />
+        <img src="images/logos/apple.png" alt="" />
       </div>
-      <img src="images/logos/hp.jpg" />
-      <img src="images/logos/Toshiba.png" />
-      <img src="images/logos/sony.svg" />
-      <img src="images/logos/epson.jpg" />
-      <img src="images/logos/acer.png" />
-      <img src="images/logos/cisco.png" />
-      <img src="images/logos/apple.png" />
-      <img src="images/logos/hp.jpg" />
-      <img src="images/logos/Toshiba.png" />
-      <img src="images/logos/sony.svg" />
-      <img src="images/logos/epson.jpg" />
-      <img src="images/logos/acer.png" />
-      <img src="images/logos/cisco.png" />
-      <img src="images/logos/apple.png" />
-      <img src="images/logos/hp.jpg" />
-      <img src="images/logos/Toshiba.png" />
-      <img src="images/logos/sony.svg" />
-      <img src="images/logos/epson.jpg" />
-      <img src="images/logos/acer.png" />
-      <img src="images/logos/cisco.png" />
-      <img src="images/logos/apple.png" />
-      <img src="images/logos/hp.jpg" />
-      <img src="images/logos/Toshiba.png" />
-      <img src="images/logos/sony.svg" />
-      <img src="images/logos/epson.jpg" />
-      <img src="images/logos/acer.png" />
-      <img src="images/logos/cisco.png" />
-      <img src="images/logos/apple.png" />
-      <img src="images/logos/hp.jpg" />
-      <img src="images/logos/Toshiba.png" />
-      <img src="images/logos/sony.svg" />
-      <img src="images/logos/epson.jpg" />
-      <img src="images/logos/acer.png" />
-      <img src="images/logos/cisco.png" />
+      <img src="images/logos/hp.jpg" alt="" />
+      <img src="images/logos/Toshiba.png" alt="" />
+      <img src="images/logos/sony.svg" alt="" />
+      <img src="images/logos/epson.jpg" alt="" />
+      <img src="images/logos/acer.png" alt="" />
+      <img src="images/logos/cisco.png" alt="" />
+      <img src="images/logos/apple.png" alt="" />
+      <img src="images/logos/hp.jpg" alt="" />
+      <img src="images/logos/Toshiba.png" alt="" />
+      <img src="images/logos/sony.svg" alt="" />
+      <img src="images/logos/epson.jpg" alt="" />
+      <img src="images/logos/acer.png" alt="" />
+      <img src="images/logos/cisco.png" alt="" />
+      <img src="images/logos/apple.png" alt="" />
+      <img src="images/logos/hp.jpg" alt="" />
+      <img src="images/logos/Toshiba.png" alt="" />
+      <img src="images/logos/sony.svg" alt="" />
+      <img src="images/logos/epson.jpg" alt="" />
+      <img src="images/logos/acer.png" alt="" />
+      <img src="images/logos/cisco.png" alt="" />
+      <img src="images/logos/apple.png" alt="" />
+      <img src="images/logos/hp.jpg" alt="" />
+      <img src="images/logos/Toshiba.png" alt="" />
+      <img src="images/logos/sony.svg" alt="" />
+      <img src="images/logos/epson.jpg" alt="" />
+      <img src="images/logos/acer.png" alt="" />
+      <img src="images/logos/cisco.png" alt="" />
+      <img src="images/logos/apple.png" alt="" />
+      <img src="images/logos/hp.jpg" alt="" />
+      <img src="images/logos/Toshiba.png" alt="" />
+      <img src="images/logos/sony.svg" alt="" />
+      <img src="images/logos/epson.jpg" alt="" />
+      <img src="images/logos/acer.png" alt="" />
+      <img src="images/logos/cisco.png" alt="" />
 
       <!-- and so on -->
     </div>
@@ -239,5 +261,26 @@
     <footer>
       <p>&copy; 2025 Logtech. All rights reserved.</p>
     </footer>
+
+    <script>
+      function toggleMenu(x) {
+        x.classList.toggle("active");
+        document.getElementById("nav-links").classList.toggle("show");
+        document.querySelector(".overlay").classList.toggle("show");
+      }
+
+      function closeMenu() {
+        document.querySelector(".hamburger").classList.remove("active");
+        document.getElementById("nav-links").classList.remove("show");
+        document.querySelector(".overlay").classList.remove("show");
+      }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800, // ms for animation
+        once: true, // animate only once
+      });
+    </script>
   </body>
 </html>
