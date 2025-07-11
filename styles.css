@@ -152,9 +152,10 @@ footer {
   padding: 10px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   nav ul {
     flex-direction: column;
+    align-items: center; /* center them horizontally */
   }
 
   nav ul li {
