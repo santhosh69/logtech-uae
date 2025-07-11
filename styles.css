@@ -19,8 +19,8 @@ body {
 } */
 
 header img.banner {
-  margin: 0 auto;
-  width: 80%;
+  margin: 20px auto;
+  width: 95%;
   height: auto;
   display: block;
 }
@@ -161,10 +161,6 @@ footer {
   nav ul li {
     margin: 10px 0;
   }
-}
-header {
-  padding-top: 20px; /* adds 20px space at the top */
-  text-align: center;
 }
 
 .product-grid {
