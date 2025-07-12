@@ -144,6 +144,12 @@ p {
   font-weight: 300;
   color: #000;
 }
+
+footer p {
+  font-size: 0.85em;
+  font-weight: 300;
+  color: #000;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
