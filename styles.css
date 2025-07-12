@@ -68,6 +68,7 @@ header img.banner {
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease;
+  margin-top: 150px; /* Adjusted for better visibility */
 }
 
 #hero h1.animate {
@@ -125,6 +126,11 @@ section {
   margin: auto;
 }
 
+#hero {
+  padding: 0px;
+  max-width: 2000px;
+}
+
 h2 {
   text-align: center;
   margin-bottom: 20px;
@@ -140,7 +146,7 @@ h3 {
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 300;
   color: #000;
 }
@@ -212,16 +218,16 @@ footer {
   padding: 10px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
-    align-items: center; /* center them horizontally */
+    align-items: center; 
   }
 
   nav ul li {
     margin: 10px;
   }
-}
+} */
 
 .product-grid {
   display: grid;
@@ -283,6 +289,10 @@ footer {
   filter: grayscale(0%); /* hover to show original color */
 }
 
+.logtech-logo {
+  display: flex;
+  scale: 0.3;
+}
 /* For the hamburger menu */
 /* --- BASE NAV --- */
 nav {
@@ -343,6 +353,7 @@ nav ul li a {
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
+    align-items: center;
     position: fixed;
     top: 0;
     right: -250px; /* start hidden */
