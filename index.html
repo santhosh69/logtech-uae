@@ -6,35 +6,64 @@
     <meta name="color-scheme" content="light only" />
 
     <title>Logtech Computers and Internet</title>
-    <link rel="stylesheet" href="styles.css" />
+
     <link rel="icon" type="image/jpg" href="logo.jpg" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fugaz+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
   <body>
     <header>
       <nav>
-        <ul>
+        <div class="logo">LOGTECH</div>
+
+        <!-- Fancy Hamburger -->
+        <div class="hamburger" onclick="toggleMenu(this)">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Slide-in Nav Links -->
+        <ul id="nav-links">
           <li><a href="#services">Services</a></li>
           <li><a href="#products">Products</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#contact">Enquiry</a></li>
         </ul>
+
+        <!-- Overlay -->
+        <div class="overlay" onclick="closeMenu()"></div>
       </nav>
-      <img src="banner.png" alt="Logtech Banner" class="banner" />
-      <h1>LAPTOP SALES AND SERVICE</h1>
-      <h3>
-        Wide spread name through its retail, wholesale & distribution of all
-        major IT branded products
-      </h3>
+      <section id="hero">
+        <img src="banner.png" alt="Logtech Banner" class="banner" />
+        <h1>LAPTOP SALES AND SERVICE</h1>
+        <h3>
+          Wide spread name through its retail, wholesale & distribution of all
+          major IT branded products
+        </h3>
+      </section>
       <!-- <h2>Computers and Internet</h2>
       <p>Your one-stop solution for all computer needs</p> -->
     </header>
 
-    <section id="hero">
-      <h2>Your Trusted Computer Store</h2>
-      <p>Best Deals, Trusted Services, Quality Products</p>
-    </section>
+    <h2>Your Trusted Computer Store</h2>
+    <h3>Best Deals, Trusted Services, Quality Products</h3>
 
-    <section id="about">
+    <section id="about" data-aos="fade-up">
       <h2>About Us</h2>
       <p>
         <b>LOGTECH Computers</b> has been a trusted partner in information and
@@ -56,51 +85,51 @@
       <h2>IT Peripherals:</h2>
       <!-- IT Peripherals -->
       <div class="product-grid">
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up">
           <img src="images/server.jpg" alt="Server" />
           <h3>Server</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="50">
           <img src="images/notebooks.jpg" alt="Notebooks" />
           <h3>Notebooks</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="100">
           <img src="images/desktops.jpg" alt="Desktops" />
           <h3>Desktops</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="150">
           <img src="images/printers.jpg" alt="Printers" />
           <h3>Printers</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="200">
           <img src="images/pos.webp" alt="POS System" />
           <h3>POS System</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="250">
           <img src="images/scanner.jfif" alt="Scanners" />
           <h3>Scanners</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="300">
           <img src="images/barcode-printer.jpg" alt="Barcode Printer" />
           <h3>Barcode Printer</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="350">
           <img src="images/ups.webp" alt="UPS" />
           <h3>UPS</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="400">
           <img src="images/hdd.webp" alt="Harddisk" />
           <h3>Harddisk</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="450">
           <img src="images/networking.webp" alt="Networking Accessories" />
           <h3>Networking Accessories</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="500">
           <img src="images/projector.jfif" alt="Multimedia Projector" />
           <h3>Multimedia Projector</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="550">
           <img
             src="images/projector-accessories.webp"
             alt="Projector Accessories"
@@ -114,30 +143,30 @@
       <h2>Printing Supplies:</h2>
       <!-- Printing Supplies -->
       <div class="product-grid">
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up">
           <img src="images/toner.webp" alt="Toner" />
           <h3>Toner</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="100">
           <img
             src="images/printer-ink-cartridges-500x500.webp"
             alt="Cartridges"
           />
           <h3>Ink Cartridges</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="200">
           <img src="images/a4-size-paper-bundle.jpg" alt="Paper" />
           <h3>Paper</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="300">
           <img src="images/drum.jpg" alt="Printer Drum" />
           <h3>Printer Drum</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="400">
           <img src="images/barcodelabel.webp" alt="Barcode Label" />
           <h3>Barcode Labels</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="500">
           <img src="images/ribbon.jpg" alt="Ribbon" />
           <h3>Printer Ribbons</h3>
         </div>
@@ -148,79 +177,78 @@
       <h2>Data Storage:</h2>
       <!-- Data Storage -->
       <div class="product-grid">
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up">
           <img src="images/flashdrive.avif" alt="Flash Drive" />
           <h3>Flash Drive</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="100">
           <img src="images/memorycards.jpg" alt="Memory Cards" />
           <h3>Memory Cards</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="200">
           <img src="images/hdd.webp" alt="HDD" />
           <h3>Harddisk</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="300">
           <img src="images/data-cartridge.jpg" alt="Data Backup Cartridge" />
           <h3>Data Cartridge</h3>
         </div>
-        <div class="product-item">
+        <div class="product-item" data-aos="fade-up" data-aos-delay="400">
           <img src="images/nas.webp" alt="NAS Drive" />
           <h3>NAS Drive</h3>
         </div>
       </div>
-      <section id="services">
+      <section id="services" data-aos="fade-up">
         <h2>IT Consultancy Services:</h2>
         <h3>Business Continuity Prevention</h3>
         <h3>CCTV Security System</h3>
         <h3>Network Cable Installation</h3>
         <h3>IT Relocation</h3>
-        <h3>System Setup and PABX and IP PABX System</h3>
+        <h3>System Setup</h3>
+        <h3>PABX and IP PABX System</h3>
       </section>
     </section>
-    <div class="logo-grid">
-      <div class="logo-grid">
-        <img src="images/logos/apple.png" />
-      </div>
-      <img src="images/logos/hp.jpg" />
-      <img src="images/logos/Toshiba.png" />
-      <img src="images/logos/sony.svg" />
-      <img src="images/logos/epson.jpg" />
-      <img src="images/logos/acer.png" />
-      <img src="images/logos/cisco.png" />
-      <img src="images/logos/apple.png" />
-      <img src="images/logos/hp.jpg" />
-      <img src="images/logos/Toshiba.png" />
-      <img src="images/logos/sony.svg" />
-      <img src="images/logos/epson.jpg" />
-      <img src="images/logos/acer.png" />
-      <img src="images/logos/cisco.png" />
-      <img src="images/logos/apple.png" />
-      <img src="images/logos/hp.jpg" />
-      <img src="images/logos/Toshiba.png" />
-      <img src="images/logos/sony.svg" />
-      <img src="images/logos/epson.jpg" />
-      <img src="images/logos/acer.png" />
-      <img src="images/logos/cisco.png" />
-      <img src="images/logos/apple.png" />
-      <img src="images/logos/hp.jpg" />
-      <img src="images/logos/Toshiba.png" />
-      <img src="images/logos/sony.svg" />
-      <img src="images/logos/epson.jpg" />
-      <img src="images/logos/acer.png" />
-      <img src="images/logos/cisco.png" />
-      <img src="images/logos/apple.png" />
-      <img src="images/logos/hp.jpg" />
-      <img src="images/logos/Toshiba.png" />
-      <img src="images/logos/sony.svg" />
-      <img src="images/logos/epson.jpg" />
-      <img src="images/logos/acer.png" />
-      <img src="images/logos/cisco.png" />
+    <div class="logo-grid" data-aos="fade-up">
+      <img src="images/logos/apple.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/hp.jpg" alt="" data-aos="fade-up" />
+      <img src="images/logos/Toshiba.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/sony.svg" alt="" data-aos="fade-up" />
+      <img src="images/logos/epson.jpg" alt="" data-aos="fade-up" />
+      <img src="images/logos/acer.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/cisco.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/apple.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/hp.jpg" alt="" data-aos="fade-up" />
+      <img src="images/logos/Toshiba.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/sony.svg" alt="" data-aos="fade-up" />
+      <img src="images/logos/epson.jpg" alt="" data-aos="fade-up" />
+      <img src="images/logos/acer.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/cisco.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/apple.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/hp.jpg" alt="" data-aos="fade-up" />
+      <img src="images/logos/Toshiba.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/sony.svg" alt="" data-aos="fade-up" />
+      <img src="images/logos/epson.jpg" alt="" data-aos="fade-up" />
+      <img src="images/logos/acer.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/cisco.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/apple.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/hp.jpg" alt="" data-aos="fade-up" />
+      <img src="images/logos/Toshiba.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/sony.svg" alt="" data-aos="fade-up" />
+      <img src="images/logos/epson.jpg" alt="" data-aos="fade-up" />
+      <img src="images/logos/acer.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/cisco.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/apple.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/hp.jpg" alt="" data-aos="fade-up" />
+      <img src="images/logos/Toshiba.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/sony.svg" alt="" data-aos="fade-up" />
+      <img src="images/logos/epson.jpg" alt="" data-aos="fade-up" />
+      <img src="images/logos/acer.png" alt="" data-aos="fade-up" />
+      <img src="images/logos/cisco.png" alt="" data-aos="fade-up" />
 
       <!-- and so on -->
     </div>
 
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
       <h2>Customer Enquiry</h2>
       <form action="mailto:xyz@gmail.com" method="post" enctype="text/plain">
         <label for="name">Name</label>
@@ -239,5 +267,54 @@
     <footer>
       <p>&copy; 2025 Logtech. All rights reserved.</p>
     </footer>
+
+    <script>
+      function toggleMenu(x) {
+        x.classList.toggle("active");
+        document.getElementById("nav-links").classList.toggle("show");
+        document.querySelector(".overlay").classList.toggle("show");
+      }
+
+      function closeMenu() {
+        document.querySelector(".hamburger").classList.remove("active");
+        document.getElementById("nav-links").classList.remove("show");
+        document.querySelector(".overlay").classList.remove("show");
+      }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800, // ms for animation
+        once: true, // animate only once
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const heroHeading = document.querySelector("#hero h1");
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                heroHeading.classList.add("animate");
+                observer.unobserve(entry.target); // run once
+              }
+            });
+          },
+          { threshold: 0.1 } // how much of it must be visible
+        );
+
+        observer.observe(heroHeading);
+      });
+    </script>
   </body>
 </html>
+
+<!-- Popular AOS effects
+fade-up → fade in + slide up
+fade-down → fade in + slide down
+fade-left → fade in + slide left
+fade-right → fade in + slide right
+zoom-in → zoom in + fade
+flip-left → flip from left
+flip-right → flip from right -->
