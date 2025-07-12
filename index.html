@@ -77,9 +77,9 @@
         computer hardware and information technology. Our experienced team
         ensures that every project runs smoothly — including hardware supply,
         installation, and maintenance — so our clients can focus on what they do
-        best. At LOGTECH Computers, we are committed to providing high-quality,
-        professional service that meets the evolving demands of today’s
-        technology landscape.
+        best. At <b>LOGTECH Computers</b>, we are committed to providing
+        high-quality, professional service that meets the evolving demands of
+        today’s technology landscape.
       </p>
     </section>
 
@@ -283,6 +283,28 @@
         document.querySelector(".overlay").classList.remove("show");
       }
     </script>
+    <script>
+      // your existing code
+      function toggleMenu(x) {
+        x.classList.toggle("active");
+        document.getElementById("nav-links").classList.toggle("show");
+        document.querySelector(".overlay").classList.toggle("show");
+      }
+
+      function closeMenu() {
+        document.querySelector(".hamburger").classList.remove("active");
+        document.getElementById("nav-links").classList.remove("show");
+        document.querySelector(".overlay").classList.remove("show");
+      }
+
+      // ✅ NEW: Close the menu when any nav link is clicked
+      const navItems = document.querySelectorAll("#nav-links a");
+      navItems.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+    </script>
+
+    <!-- Animate on scroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
@@ -290,6 +312,7 @@
         once: true, // animate only once
       });
     </script>
+    <!-- animate hero heading -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const heroHeading = document.querySelector("#hero h1");
