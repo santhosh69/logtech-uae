@@ -159,7 +159,7 @@ p {
 footer p {
   font-size: 0.85em;
   font-weight: 300;
-  color: #000;
+  color: #fff;
 }
 .grid {
   display: grid;
@@ -218,7 +218,7 @@ form button:hover {
 
 footer {
   text-align: center;
-  background: #0077b6;
+  background: #047aef;
   color: #fff;
   padding: 10px;
 }
